@@ -2,7 +2,7 @@ use std::env;
 use std::process::Command;
 
 fn main() {
-    let result = env::var("CHRONOGRAF_HOME").unwrap();
+    let result = env::var("TELEGRAF_HOME").unwrap();
     let script_path = result + "/mate/scripts/start-telegraf.sh";
     let fail_msg = "failed to execute process";
     let output = Command::new("/bin/bash")
